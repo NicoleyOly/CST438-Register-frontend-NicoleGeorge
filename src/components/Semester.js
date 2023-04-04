@@ -8,6 +8,8 @@ import Radio from '@mui/material/Radio';
 import {DataGrid} from '@mui/x-data-grid';
 import {SEMESTER_LIST} from '../constants.js'
 import StudentList from './StudentList.js';
+import Admin from './Admin.js';
+import AddStudent from './AddStudent.js';
 
 // user selects from a list of  (year, semester) values
 class Semester extends Component {
