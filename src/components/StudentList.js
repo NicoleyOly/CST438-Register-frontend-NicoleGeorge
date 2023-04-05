@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import AddCourse from './AddCourse';
 import AddStudent from './AddStudent';
 
+
 class StudentList extends Component {
     constructor(props) {
       super(props);

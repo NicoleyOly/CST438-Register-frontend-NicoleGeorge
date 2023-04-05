@@ -71,22 +71,26 @@ class AddStudent extends Component {
    
 
 render()  { 
+  const {a,b, message } = this.props;
   return (
       <div>
         <Button variant="outlined" color="primary" style={{margin: 10}} onClick={this.handleClickOpen}>
-          Add Student
+          Add Student!
         </Button>
         <Dialog open={this.state.open} onClose={this.handleClose}>
-            <DialogTitle>Add Student</DialogTitle>
+            <DialogTitle>Add Student!</DialogTitle>
+            <span id ="factora">{a}</span> 
             <DialogContent  style={{paddingTop: 20}} >
-
-              <TextField autoFocus fullWidth label="Student Name" name="name" onChange={this.handleChange}  /> 
+              <TextField autoFocus fullWidth label="Student Name" id="name!" name="name" onChange={this.handleChange}  /> 
+              <br></br>
+              <TextField autoFocus fullWidth label="Student Email" id="email!" name="email" onChange={this.handleChange}  /> 
+              <span id="factorb">{b}</span>
               <h3>{this.state.message}</h3>
-              <TextField autoFocus fullWidth label="Student Email" name="email" onChange={this.handleChange}  /> 
             </DialogContent>
             <DialogActions>
-             <Button color="secondary" onClick={this.handleClose}>Cancel</Button>
-              <Button id="Add" color="primary" onClick={this.handleAdd}>Add</Button>
+             <Button id="Cancel" color="secondary" onClick={this.handleClose}>Cancel</Button>
+              <Button id="Add!" color="primary" onClick={this.handleAdd}>Add</Button>
+              <h4 id="message" >{message}</h4>
              </DialogActions>
            </Dialog>      
       </div>
